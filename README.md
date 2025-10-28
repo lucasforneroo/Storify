@@ -1,90 +1,186 @@
+#  Storify — CRUD de tareas (React + Vite)
 
-# Storify — CRUD de tareas (React + Vite)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-![Storify](https://img.shields.io/badge/Storify-React%20%2B%20Vite-blue)
+> Una aplicación moderna para gestionar tareas localmente con React y Vite. Perfecta como proyecto didáctico o plantilla base.
 
-Storify es una pequeña aplicación de ejemplo para gestionar tareas localmente. Está pensada como proyecto didáctico o plantilla base para practicar React, persistencia en el navegador y componentes reutilizables.
+---
 
-Contenido destacado
+##  Tabla de Contenidos
 
-- Crear, editar y eliminar tareas.
-- Búsqueda en tiempo real y filtros por categoría.
-- Ordenamiento (recientes / alfabético / categoría).
-- Persistencia por usuario: cada usuario tiene su propia lista en `localStorage` (`tareas_<usuario>`).
+- [Características](#-características)
+- [Demo](#-demo--capturas)
+- [Instalación](#-instalación-rápida)
+- [Uso](#-uso-básico)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Despliegue](#-despliegue)
+- [Contribuir](#-contribuir)
+- [Licencia](#-licencia)
+- [Contacto](#-contacto)
 
-Demo / Capturas
+---
 
-Agrega aquí tus capturas en `assets/` y la referencia en Markdown para que el README luzca mejor en GitHub. Ejemplo:
+##  Características
 
-```md
-![captura](./assets/screenshot.png)
+-  **CRUD completo** — Crear, editar y eliminar tareas
+-  **Búsqueda en tiempo real** — Encuentra tareas al instante
+-  **Filtros por categoría** — Organiza tus tareas eficientemente
+-  **Múltiples ordenamientos** — Por fecha, alfabético o categoría
+-  **Multi-usuario** — Cada usuario tiene su propia lista independiente
+-  **Persistencia local** — Datos guardados en `localStorage` sin necesidad de backend
+-  **Rápida y ligera** — Construida con Vite para máxima velocidad
+
+---
+
+##  Demo / Capturas
+
+<!-- Agrega tu captura aquí -->
+![Captura de Storify] *(Próximamente)*
+
+
+<!-- Si tienes demo en vivo, añade el link -->
+**[Ver Demo en Vivo](#)** *(Próximamente)*
+
+---
+
+##  Instalación rápida
+
+### Requisitos previos
+- Node.js (>=16)
+- npm o yarn
+
+### Pasos
+
+1. **Clona el repositorio**
+```bash
+   git clone https://github.com/tu-usuario/storify.git
+   cd storify
 ```
 
-Instalación rápida
-
-Requisitos: Node.js (>=16) y npm.
-
-En PowerShell (Windows):
-
-```powershell
-cd C:\Users\USER\Desktop\CRUD-localStorage\crud-react
-npm install
-npm run dev
+2. **Instala las dependencias**
+```bash
+   npm install
 ```
 
-Abre la URL que Vite muestre en la consola (por defecto `http://localhost:5173`).
+3. **Inicia el servidor de desarrollo**
+```bash
+   npm run dev
+```
 
-Uso básico
+4. **Abre tu navegador**
+```
+   http://localhost:5173
+```
 
-1. Inicia sesión con un nombre de usuario (la sesión se guarda en `sessionStorage`).
-2. Añade tareas desde el campo principal.
-3. Usa la búsqueda y los filtros para refinar la lista.
+---
 
-Cómo funciona (breve)
+##  Uso básico
 
-- La aplicación mantiene la sesión del usuario en `sessionStorage` bajo la clave `usuario`.
-- Las tareas se guardan en `localStorage` con la clave `tareas_<usuario>`, de forma que cada usuario ve su propia lista.
-- El componente `SearchAndFilter` emite callbacks para búsqueda, filtro y orden; `App.jsx` aplica la lógica y devuelve la lista filtrada.
+1. **Inicia sesión** con un nombre de usuario (se guarda en `sessionStorage`)
+2. **Añade tareas** usando el campo de entrada principal
+3. **Busca y filtra** tus tareas según necesites
+4. **Edita o elimina** tareas con los botones de acción
 
-Estructura del proyecto
+### Cómo funciona internamente
 
-- `index.html` — HTML base
-- `style.css` — estilos globales
-- `src/`
-  - `main.jsx` — entrada
-  - `App.jsx` — componente principal (estado, CRUD y mezcla de componentes)
-  - `components/SearchAndFilter.jsx` — UI de búsqueda y filtros
-  - `constants.js` — iconos/constantes
+-  **Sesión de usuario**: Guardada en `sessionStorage` bajo la clave `usuario`
+-  **Almacenamiento de tareas**: En `localStorage` con la clave `tareas_<usuario>`
+-  **Aislamiento por usuario**: Cada usuario ve únicamente sus propias tareas
+-  **Componentes reutilizables**: Arquitectura modular para fácil mantenimiento
 
-Estado actual y notas
+---
 
-- Durante el desarrollo se usaron archivos temporales (`AppFixed.jsx`, `AppClean.jsx`) para recuperar una versión funcional. He consolidado la implementación en `src/App.jsx` y eliminado temporales para mantener el repo limpio.
+## 📁 Estructura del proyecto
+```
+storify/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── SearchAndFilter.jsx    # Búsqueda y filtros
+│   ├── App.jsx                     # Componente principal
+│   ├── main.jsx                    # Punto de entrada
+│   └── constants.js                # Constantes e iconos
+├── assets/                         # Imágenes y recursos
+├── index.html                      # HTML base
+├── style.css                       # Estilos globales
+├── package.json
+└── vite.config.js
+```
 
-Despliegue (opcional)
+---
 
-Puedes desplegar la app en Netlify, Vercel o GitHub Pages tras ejecutar `npm run build`. Para una vista previa local de la build:
+##  Despliegue
 
-```powershell
+### Build de producción
+```bash
 npm run build
+```
+
+### Vista previa local de la build
+```bash
 npm run preview
 ```
 
-Buenas prácticas y siguientes pasos sugeridos
+### Opciones de despliegue recomendadas
 
-- Añadir pruebas unitarias básicas (Jest + React Testing Library).
-- Añadir validación más robusta y límites de tamaño para los inputs.
-- Localización y accesibilidad (labels, roles, tests de contraste).
+- **Vercel**: Deploy automático desde GitHub
+- **Netlify**: Drag & drop de la carpeta `dist`
+- **GitHub Pages**: Configuración con GitHub Actions
 
-Contribuir
+---
 
-Si quieres colaborar, abre un issue o un PR. Sugerencias pequeñas (UI, tests, mejoras de UX) son bienvenidas.
+##  Próximas mejoras
 
-Licencia
+- [ ] Pruebas unitarias (Jest + React Testing Library)
+- [ ] Validación de formularios más robusta
+- [ ] Modo oscuro / claro
+- [ ] Internacionalización (i18n)
+- [ ] Mejoras de accesibilidad (ARIA labels, keyboard navigation)
+- [ ] Backend opcional con API REST
+- [ ] Autenticación con Firebase/Supabase
 
-Este repositorio no incluye una licencia por defecto. Si quieres, puedo añadir una `LICENSE` (por ejemplo MIT).
+---
 
-Contacto
+##  Contribuir
 
-Hecho por Lucas Fornero. Para cambios grandes, abre un issue en el repositorio.
+¡Las contribuciones son bienvenidas! Si quieres colaborar:
 
-Versión del README: 27/10/2025
+1.  Fork el proyecto
+2.  Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
+3.  Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4.  Push a la rama (`git push origin feature/AmazingFeature`)
+5.  Abre un Pull Request
+
+Para cambios grandes, abre primero un issue para discutir los cambios propuestos.
+
+---
+
+##  Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+```
+MIT License - Copyright (c) 2025 Lucas Fornero
+```
+
+---
+
+##  Contacto
+
+**Lucas Fornero**
+
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- LinkedIn: [Tu perfil](https://linkedin.com/in/tu-perfil)
+- Email: tu-email@ejemplo.com
+
+---
+
+<div align="center">
+
+**⭐ Si te gustó este proyecto, dale una estrella en GitHub ⭐**
+
+*Última actualización: 28 de octubre de 2025*
+
+</div>
