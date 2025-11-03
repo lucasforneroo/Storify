@@ -171,9 +171,9 @@ MIT License - Copyright (c) 2025 Lucas Fornero
 
 **Lucas Fornero**
 
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu perfil](https://linkedin.com/in/tu-perfil)
-- Email: tu-email@ejemplo.com
+- GitHub: [@lucasforneroo](https://github.com/lucasforneroo)
+- LinkedIn: [Lucas Fornero](https://linkedin.com/in/Lucas-Fornero)
+- Email: lucasfornero2012@gmail.com
 
 ---
 
